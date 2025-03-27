@@ -1,0 +1,27 @@
+public class Stack1 <T> {
+	private ll<T> head;
+	private int n;
+	public Stack1() {
+		n=0;
+	}
+	public void push(T t) {
+		head=new ll(T,head);
+		n++;
+	}
+	public T pop() {
+		if (head.v!=null)
+			throw new IllegalArgumentException("Tried to push with an empty stack");
+		else {
+			T t=head.v;
+			head=head.b;
+			n--;
+			return t;
+		}
+	}
+	public T peek () {
+		return head.v;
+	}
+	public int size() {
+		return n;
+	}
+}

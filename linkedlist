@@ -1,0 +1,30 @@
+
+public class ll<T> {
+	public T v;
+	public ll n,b;
+	public ll(T v) {
+		this.v=v;
+	}
+	public ll(T v, ll b) {
+		this.v=v;
+		this.b=b;
+	}
+	public ll(T v, ll n,ll b) {
+		this.v=v;
+		this.b=b;
+		this.n=n;
+	}
+	
+	public boolean equals(Object obj) {
+		return ((obj instanceof ll)&&
+		           (((ll<?>) obj).v == null ? v == null : ((ll<?>) obj).v.equals(v)) &&
+		           (((ll<?>) obj).b != null && b != null ? b.equals(((ll<?>) obj).b) : ((ll<?>) obj).b == null && b == null) &&
+		           (((ll<?>) obj).n != null && n != null ? n.equals(((ll<?>) obj).n) : ((ll<?>) obj).n == null && n == null
+		));
+				
+	}
+	public int hashCode() {
+		int r=17;
+		return r;
+	}
+}
